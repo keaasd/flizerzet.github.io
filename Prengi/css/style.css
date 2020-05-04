@@ -52,6 +52,7 @@
   min-height: 700px;
   background: url("../img/header_bg.jpg") center center/cover no-repeat;
   padding: 40px 0 0px;
+  overflow: hidden;
 }
 .header__logo {
   display: inline;
