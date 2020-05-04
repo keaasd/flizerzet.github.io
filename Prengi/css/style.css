@@ -633,7 +633,7 @@
     display: none;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 470px) {
   .header__phones {
     display: none;
   }
