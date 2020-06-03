@@ -938,7 +938,7 @@ body {
 
   .header__link a {
     font-size: 25px;
-    margin: 20px 0;
+    padding: 20px 0;
   }
 
   .services__col {
