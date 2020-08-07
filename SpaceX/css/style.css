@@ -1,0 +1,261 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #010001;
+  color: #fff;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  width: 90%;
+  max-width: 1230px;
+  margin: 0px auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.item {
+  margin: 0px 10px;
+  list-style: none;
+}
+
+.main-nav .list .item-link{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.secondary-nav .list .item-link{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #808080;
+}
+
+.main {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 64px;
+}
+
+.description {
+  margin: 26px auto 0;
+  max-width: 268px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.description:after {
+  content: '';
+  display: block;
+  margin: 26px auto 0;
+  height: 60px;
+  width: 1px;
+  background-color: #fff;
+}
+
+.video {
+  height: 750px;
+  width: 90%;
+  max-width: 1230px;
+  margin: 0px auto;
+}
+
+.features {
+  width: 90%;
+  max-width: 1230px;
+  margin: 0px auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.features-title {
+  width: 177px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.table {
+  margin-top: 45px;
+  font-size: 18px;
+  margin-bottom: 218px;
+}
+
+td span {
+  color: #B2B0B2;
+}
+
+.first-column {
+  width: 300px;
+  padding: 10px 0;
+}
+
+.features-text {
+  margin-top: 45px;
+  width: 490px;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.rocket {
+  height: 1700px;
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  z-index: 10;
+}
+
+.footer {
+  margin-top: 183px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.footer-nav {
+  margin-top: 43px;
+}
+
+.footer-nav .list {
+  list-style: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.footer-nav .list li {
+  margin: 0px 20px;
+}
+
+.footer-nav .list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav .item-link {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer-text {
+  margin-top: 23px;
+  font-size: 18px;
+  color: #808080;
+}
+
+.footer-btn {
+  margin-top: 30px;
+  width: 260px;
+  height: 60px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 900px){
+  .rocket {
+    max-width: 200px;
+  }
+  .first-column {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px){
+  .header {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .header .main-nav {
+    margin: 20px 0;
+  }
+  .video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px){
+  .rocket {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .table {
+    margin: 0;
+  }
+  .first-column {
+    font-size: 14px;
+    width: 150px;
+  }
+  .footer-nav .list{
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-nav li {
+    margin-bottom: 10px;
+  }
+  .footer-text {
+    text-align: center;
+  }
+  .main {
+    padding-top: 50px;
+  }
+}
