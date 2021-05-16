@@ -6,11 +6,9 @@ const todosNeed = document.querySelector('.todos-need');
 const todosDone = document.querySelector('.todos-done');
 const importantCheckbox = document.querySelector('.make-important input[type=\'checkbox\']');
 
-let todos = document.querySelectorAll('.todo');
-
 let deleteBtn = document.querySelectorAll('.delete');
-let doneBtn = document.querySelectorAll('.done');
-let editBtn = document.querySelectorAll('.edit');
+let doneBtn = todosNeed.querySelectorAll('.done');
+let editBtn = todosNeed.querySelectorAll('.edit');
 
 function updateHoverBtns() {
 	deleteBtn = document.querySelectorAll('.delete');
@@ -19,27 +17,26 @@ function updateHoverBtns() {
 
 	deleteBtn.forEach(btn => {
 		btn.addEventListener('click', () => {
-			btn.parentElement.parentElement.remove();
+			btn.closest('.todo').remove();
 		})	
 	});
 
 	doneBtn.forEach(btn => {
-		btn.addEventListener('click', () => {
-			if (!btn.parentElement.parentElement.classList.contains('editable')) {
-				new Todo().renderDone(btn.parentElement.parentElement.querySelector('.todo-label .todo-text').textContent);
-				btn.parentElement.parentElement.remove();
+		btn.addEventListener('click', (e) => {
+			if (!btn.closest('.todo').classList.contains('editable')) {
+				new Todo().renderDone(btn.closest('.todo').querySelector('.todo-label .todo-text').textContent, e);
 			} else {
-				btn.parentElement.parentElement.classList.remove('editable');
-				btn.parentElement.parentElement.querySelector('.todo-label .todo-text').setAttribute('contenteditable', false);
+				btn.closest('.todo').classList.remove('editable');
+				btn.closest('.todo').querySelector('.todo-label .todo-text').setAttribute('contenteditable', false);
 			}
 		})
 	});
 
 	editBtn.forEach(btn => {
 		btn.addEventListener('click', () => {
-			btn.parentElement.parentElement.classList.add('editable');
-			btn.parentElement.parentElement.querySelector('.todo-label .todo-text').setAttribute('contenteditable', true);
-			btn.parentElement.parentElement.querySelector('.todo-label .todo-text').focus();
+			btn.closest('.todo').classList.add('editable');
+			btn.closest('.todo').querySelector('.todo-label .todo-text').setAttribute('contenteditable', true);
+			btn.closest('.todo').querySelector('.todo-label .todo-text').focus();
 		})
 	})
 
@@ -69,7 +66,8 @@ class Todo {
 								</div>
 								<label class="todo-label">
 									<div class="todo-text">${this.text}</div>
-								</label>`
+								</label>`;
+			todosNeed.querySelector('.todo-title').after(todo);
 		} else {
 			todo.classList.add('todo')
 			todo.innerHTML = `<div class="todo-hover">
@@ -79,23 +77,27 @@ class Todo {
 								</div>
 								<label class="todo-label">
 									<div class="todo-text">${this.text}</div>
-								</label>`
+								</label>`;
+			todosNeed.append(todo);
 		}
-		todosNeed.append(todo);
+		
 		updateHoverBtns();
 	}
 
-	renderDone(text) {
-		let todo = document.createElement('div');
-		todo.classList.add('todo')
-		todo.innerHTML = `<div class="todo-hover hover-done">
-								<div class="icon delete"><img src="delete-black.svg" alt=""></div>
-							</div>
-							<label class="todo-label">
-								<div class="todo-text">${text}</div>
-							</label>`;
-		todosDone.append(todo);
-		updateHoverBtns();
+	renderDone(text, e) {
+		if (e.target.closest('.todo').parentElement && e.target.closest('.todo').parentElement.classList.contains('todos-need')) {
+			let todo = document.createElement('div');
+			todo.classList.add('todo');
+			todo.innerHTML = `<div class="todo-hover hover-done">
+									<div class="icon delete"><img src="delete-black.svg" alt=""></div>
+								</div>
+								<label class="todo-label">
+									<div class="todo-text">${text}</div>
+								</label>`;
+			todosDone.append(todo);
+			e.target.closest('.todo').remove();
+			updateHoverBtns();
+		}
 	}
 }
 
