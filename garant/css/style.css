@@ -68,6 +68,7 @@ body {
 }
 
 .card__add {
+  display: inline-block;
   margin-top: 20px;
   position: relative;
 }
@@ -154,29 +155,6 @@ body {
   width: 100%;
 }
 
-.service__table tr {
-  position: relative;
-}
-
-.service__table tr:before {
-  content: '';
-  height: 1px;
-  width: 100%;
-  background-color: #9AC355;
-  opacity: .3;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-}
-
-.service__table td {
-  padding-top: 30px;
-}
-
-.service__table td:last-child {
-  text-align: center;
-}
-
 .service__name {
   margin-top: 10px;
   font-size: 0.9375rem;
@@ -227,6 +205,7 @@ body {
   padding: 11px 13px;
   border: 1px solid #9AC355;
   border-radius: 11px;
+  width: 45px;
 }
 
 .footer-card {
@@ -260,5 +239,30 @@ body {
 }
 
 .footer-card__back {
+  display: inline-block;
   margin-top: 20px;
+}
+
+.table__row {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  position: relative;
+}
+
+.table__row:before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #9AC355;
+  opacity: .3;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.table__item:last-child {
+  text-align: center;
 }
