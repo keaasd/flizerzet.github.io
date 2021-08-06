@@ -471,6 +471,16 @@ body.lock {
           transform: rotate(180deg);
 }
 
+.intro__link {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 147%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-variant: small-caps;
+  color: #FFFFFF;
+}
+
 .intro__title {
   font-family: "Oswald";
   font-size: 240px;
@@ -486,6 +496,38 @@ body.lock {
   line-height: 121%;
   color: #FFFFFF;
   max-width: 400px;
+}
+
+.intro__business {
+  background: #222222 url("../img/business-colored.png") right top no-repeat;
+  height: 840px;
+  min-height: auto;
+}
+
+.intro__business:before {
+  content: "";
+  display: none;
+}
+
+.intro__business .intro__title {
+  margin-top: 74px;
+}
+
+.intro__people {
+  background: #222222 url("../img/people-intro.png") right top no-repeat;
+  height: 880px;
+  min-height: auto;
+}
+
+.intro__people:before {
+  content: "";
+  display: none;
+}
+
+.intro__people .intro__title {
+  margin-top: 74px;
+  max-width: 500px;
+  line-height: 119%;
 }
 
 .bio {
@@ -644,13 +686,6 @@ body.lock {
   padding-bottom: 70px;
 }
 
-.media__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
 .media__img {
   height: 100%;
 }
@@ -685,6 +720,27 @@ body.lock {
   height: 5px;
   display: block;
   background: url("../img/icons/arrow.svg") center center no-repeat;
+}
+
+.media__subscribe {
+  margin: 40px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 74px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 11px 2px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 17px;
+  color: #000000;
 }
 
 .decathlon {
@@ -800,6 +856,141 @@ body.lock {
   margin: 0;
 }
 
+.main-business {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-business__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 628px;
+          flex: 0 0 628px;
+}
+
+.main-business__img img {
+  width: 100%;
+}
+
+.main-business__img .tablet {
+  display: none;
+}
+
+.main-business__body {
+  margin-left: 92px;
+  padding-top: 40px;
+}
+
+.main-business__text {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  font-variant: small-caps;
+  color: #FFFFFF;
+  max-width: 656px;
+  padding-right: 10px;
+}
+
+.main-business__list {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-business__list li {
+  margin-bottom: 21px;
+}
+
+.main-business__link {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-variant: small-caps;
+  color: #FFFFFF;
+}
+
+.main-people__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-people__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 628px;
+          flex: 0 0 628px;
+}
+
+.main-people__img img {
+  width: 100%;
+}
+
+.main-people__info {
+  padding: 130px 20px 0;
+  max-width: 650px;
+  margin: 0px auto;
+}
+
+.main-people__title {
+  font-weight: 600;
+  font-size: 28px;
+  font-variant: small-caps;
+  color: #000000;
+}
+
+.main-people__text {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  font-variant: small-caps;
+  color: #111111;
+}
+
+.main-people__list {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-people__list li {
+  margin-bottom: 21px;
+}
+
+.main-people__link {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  font-weight: 500;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-variant: small-caps;
+  color: #111;
+}
+
+.main-people__descr {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  font-variant: small-caps;
+  color: #111111;
+}
+
+.main-people__descr_mob {
+  display: none;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 147%;
+  font-variant: small-caps;
+  color: #111111;
+}
+
 .footer {
   padding-top: 130px;
   padding-bottom: 130px;
@@ -825,9 +1016,10 @@ body.lock {
 }
 
 .footer__social {
+  margin: 0 35px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+      -ms-flex: 0 0 75px;
+          flex: 0 0 75px;
   height: 75px;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -835,24 +1027,37 @@ body.lock {
 }
 
 .footer__social_tg {
-  background: url("../img/socials/telegram.svg") center center no-repeat;
+  background: url("../img/socials/telegram.svg") center center/100% no-repeat;
 }
 
 .footer__social_inst {
-  background: url("../img/socials/inst.svg") center center no-repeat;
+  background: url("../img/socials/inst.svg") center center/100% no-repeat;
 }
 
 .footer__social_vk {
-  background: url("../img/socials/vk.svg") center center no-repeat;
+  background: url("../img/socials/vk.svg") center center/100% no-repeat;
 }
 
 .footer__social_fb {
-  background: url("../img/socials/fb.svg") center center no-repeat;
+  background: url("../img/socials/fb.svg") center center/100% no-repeat;
 }
 
 .footer__social_yt {
   width: 96px;
-  background: url("../img/socials/yt.svg") center center no-repeat;
+  background: url("../img/socials/yt.svg") center center/100% no-repeat;
+}
+
+.footer-black .footer {
+  background: #222;
+}
+
+.footer-black .footer__title {
+  color: #fff;
+}
+
+.footer-black .footer__social {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 @media (max-width: 1440px) {
@@ -877,7 +1082,7 @@ body.lock {
   }
 
   .intro__title {
-    font-size: calc(40px + 200 * ((100vw - 320px) / 1120));
+    font-size: calc(60px + 180 * ((100vw - 320px) / 1120));
   }
 
   .intro__text {
@@ -893,7 +1098,7 @@ body.lock {
   }
 
   .bio {
-    padding-bottom: calc(30px + 120 * ((100vw - 320px) / 1120));
+    padding-bottom: calc(50px + 100 * ((100vw - 320px) / 1120));
   }
 
   .steps {
@@ -985,6 +1190,14 @@ body.lock {
   }
 }
 
+@media (max-width: 1170px) {
+  .main-people__img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 500px;
+            flex: 0 0 500px;
+  }
+}
+
 @media (max-width: 992px) {
   .text {
     margin-top: 70px;
@@ -998,21 +1211,6 @@ body.lock {
     padding-bottom: 70px;
     height: 600px;
     position: relative;
-  }
-
-  .bio__body {
-    margin: 0px auto;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    top: -80px;
-    background: #FFFFFF;
-    -webkit-box-shadow: 1px 3px 11px 8px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 3px 11px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    padding: 40px 62px;
   }
 
   .steps {
@@ -1125,7 +1323,7 @@ body.lock {
   }
 
   .work {
-    padding-top: 624px;
+    padding-top: 654px;
   }
 
   .work__img {
@@ -1253,6 +1451,47 @@ body.lock {
   .family__text {
     max-width: 100%;
   }
+
+  .main-business__img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 350px;
+            flex: 0 0 350px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    height: 100%;
+  }
+
+  .main-business__img img {
+    height: 100%;
+  }
+
+  .main-business__img .desktop {
+    display: none;
+  }
+
+  .main-business__img .tablet {
+    display: block;
+  }
+
+  .main-people__img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+  }
+
+  .main-people__img img {
+    height: 100%;
+  }
+
+  .main-people__info {
+    padding: 70px 20px 0;
+  }
+
+  .main-people__descr {
+    margin-top: 40px;
+    padding: 0px 20px;
+  }
 }
 
 @media (max-width: 992px) and (max-width: 1440px) {
@@ -1296,6 +1535,34 @@ body.lock {
     height: 824px;
   }
 
+  .intro__link {
+    display: none;
+  }
+
+  .intro__business {
+    background: #222222 url("../img/business-colored.png") right top/contain no-repeat;
+    padding-top: 140px;
+    height: 535px;
+  }
+
+  .intro__people {
+    background: #222222 url("../img/people-intro.png") right top/contain no-repeat;
+    padding-top: 140px;
+    height: 535px;
+  }
+
+  .steps {
+    padding-top: 400px;
+  }
+
+  .hobbies {
+    padding-top: 480px;
+  }
+
+  .work {
+    padding-top: 700px;
+  }
+
   .decathlon {
     padding-top: 750px;
   }
@@ -1303,11 +1570,95 @@ body.lock {
   .family {
     padding-top: 500px;
   }
+
+  .main-business__img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
+  }
+
+  .main-business__body {
+    margin-left: 40px;
+  }
+
+  .main-people__text {
+    font-size: 15px;
+  }
+
+  .main-people__descr {
+    font-size: 15px;
+  }
+
+  .main-people__descr p {
+    margin-bottom: 30px;
+  }
+
+  .footer__social {
+    height: 59px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 59px;
+            flex: 0 0 59px;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-people__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
   .bio {
     height: 800px;
+  }
+}
+
+@media (max-width: 650px) {
+  .intro__people .intro__title {
+    margin-top: 0;
+  }
+
+  .main-people__body {
+    position: relative;
+  }
+
+  .main-people__img {
+    display: none;
+  }
+
+  .main-people__info {
+    max-width: 100%;
+    width: 90%;
+    position: relative;
+    z-index: 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: -100px auto 0;
+    padding: 40px 64px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 1px 3px 11px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 3px 11px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-people__descr {
+    display: none;
+  }
+
+  .main-people__descr_mob {
+    display: block;
+  }
+}
+
+@media (max-width: 625px) {
+  .steps {
+    padding-top: 250px;
+  }
+}
+
+@media (max-width: 625px) and (max-width: 1440px) {
+  .steps {
+    padding-top: calc(500px + -250 * ((100vw - 320px) / 1120));
   }
 }
 
@@ -1350,10 +1701,25 @@ body.lock {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6.16%, #FFFFFF 16.15%);
   }
 
+  .read-more_bs {
+    height: 105px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, rgba(255, 255, 255, 0)), color-stop(16.15%, #fff));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 1%, #fff 16.15%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 1%, #fff 16.15%);
+  }
+
   .read-more_b {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(6.16%, rgba(34, 34, 34, 0)), color-stop(16.15%, #222));
     background: -o-linear-gradient(top, rgba(34, 34, 34, 0) 6.16%, #222 16.15%);
     background: linear-gradient(180deg, rgba(34, 34, 34, 0) 6.16%, #222 16.15%);
+    color: #fff;
+  }
+
+  .read-more_b_bs {
+    height: 105px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, rgba(34, 34, 34, 0)), color-stop(16.15%, #222));
+    background: -o-linear-gradient(top, rgba(34, 34, 34, 0) 1%, #222 16.15%);
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0) 1%, #222 16.15%);
     color: #fff;
   }
 
@@ -1363,6 +1729,18 @@ body.lock {
 
   .header__lang {
     font-size: 30px;
+  }
+
+  .intro__business {
+    min-height: 100vh;
+    background: #222222 url("../img/business-colored.png") center center/cover no-repeat;
+    padding-top: 240px;
+  }
+
+  .intro__people {
+    min-height: 100vh;
+    background: #222222 url("../img/people-intro.png") center center/cover no-repeat;
+    padding-top: 240px;
   }
 
   .bio {
@@ -1394,6 +1772,10 @@ body.lock {
 
   .investment__info.active {
     overflow: auto;
+  }
+
+  .hobbies {
+    padding-top: 510px;
   }
 
   .hobbies__info {
@@ -1462,6 +1844,10 @@ body.lock {
 
   .media__info.active {
     overflow: auto;
+  }
+
+  .media__link {
+    display: none;
   }
 
   .decathlon {
@@ -1534,9 +1920,78 @@ body.lock {
     overflow: auto;
   }
 
+  .main-business__img {
+    display: none;
+  }
+
+  .main-business__body {
+    margin: 20px 0 0;
+    padding: 0px 10px;
+  }
+
+  .main-business__text {
+    padding: 0;
+  }
+
+  .main-people__info {
+    padding: 20px 15px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .main-people__info.active {
+    overflow: auto;
+  }
+
   .footer__social {
-    height: 50px;
+    height: 27px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 28px;
+            flex: 0 0 28px;
     background-size: contain;
+    margin: 0px 12px;
+  }
+}
+
+@media (max-width: 495px) {
+  .people {
+    padding-top: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobbies {
+    padding-top: 480px;
+  }
+}
+
+@media (max-width: 440px) {
+  .hobbies {
+    padding-top: 440px;
+  }
+}
+
+@media (max-width: 425px) {
+  .people {
+    padding-top: 250px;
+  }
+
+  .main-business__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .hobbies {
+    padding-top: 390px;
+  }
+}
+
+@media (max-width: 350px) {
+  .hobbies {
+    padding-top: 330px;
   }
 }
 
@@ -1557,22 +2012,27 @@ body.lock {
   }
 
   .footer__social_tg:hover {
-    background: url("../img/socials/telegram-hover.svg") center center no-repeat;
+    background: url("../img/socials/telegram-hover.svg") center center/100% no-repeat;
   }
 
   .footer__social_inst:hover {
-    background: url("../img/socials/inst-hover.svg") center center no-repeat;
+    background: url("../img/socials/inst-hover.svg") center center/100% no-repeat;
   }
 
   .footer__social_vk:hover {
-    background: url("../img/socials/vk-hover.svg") center center no-repeat;
+    background: url("../img/socials/vk-hover.svg") center center/100% no-repeat;
   }
 
   .footer__social_fb:hover {
-    background: url("../img/socials/fb-hover.svg") center center no-repeat;
+    background: url("../img/socials/fb-hover.svg") center center/100% no-repeat;
   }
 
   .footer__social_yt:hover {
-    background: url("../img/socials/yt-hover.svg") center center no-repeat;
+    background: url("../img/socials/yt-hover.svg") center center/100% no-repeat;
+  }
+
+  .footer-black .footer__social:hover {
+    -webkit-filter: invert(0);
+            filter: invert(0);
   }
 }
