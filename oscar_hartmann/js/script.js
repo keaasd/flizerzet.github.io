@@ -189,6 +189,16 @@ if (burger && menu) {
 		headerWrapper.classList.toggle('active');
 		body.classList.toggle('lock');
 	}
+	menu.addEventListener('click', e => {
+		if (e.target.classList.contains('menu__link')) {
+			burger.classList.remove('active');
+			menu.classList.remove('active');
+			langs.classList.remove('active');
+			header.classList.remove('active');
+			headerWrapper.classList.remove('active');
+			body.classList.remove('lock');
+		}
+	})
 }
 
 // Langs
