@@ -706,6 +706,10 @@ body.lock {
   height: 100%;
 }
 
+.work__title {
+  max-width: 1100px;
+}
+
 .work__info {
   position: relative;
   z-index: 3;
@@ -717,7 +721,6 @@ body.lock {
 
 .media {
   position: relative;
-  padding-bottom: 70px;
 }
 
 .media__img {
@@ -840,6 +843,9 @@ body.lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
