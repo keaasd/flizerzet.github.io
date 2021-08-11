@@ -38,8 +38,6 @@ testWebP(function (support) {
 // Andrikanych Yevhen 2020
 // https://www.youtube.com/c/freelancerlifestyle
 
-"use strict";
-
 (function () {
 	let originalPositions = [];
 	let daElements = document.querySelectorAll('[data-da]');
@@ -179,6 +177,7 @@ const burger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const headerWrapper = document.querySelector('.header__wrapper');
 const langs = document.querySelector('.header__langs');
+const contacts = document.querySelector('.contacts');
 
 if (burger && menu) {
 	burger.onclick = () => {
@@ -187,6 +186,7 @@ if (burger && menu) {
 		langs.classList.toggle('active');
 		header.classList.toggle('active');
 		headerWrapper.classList.toggle('active');
+		contacts.classList.toggle('active');
 		body.classList.toggle('lock');
 	}
 	menu.addEventListener('click', e => {
@@ -196,6 +196,7 @@ if (burger && menu) {
 			langs.classList.remove('active');
 			header.classList.remove('active');
 			headerWrapper.classList.remove('active');
+			contacts.classList.remove('active');
 			body.classList.remove('lock');
 		}
 	})
