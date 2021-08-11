@@ -429,6 +429,20 @@ body.lock {
   position: relative;
 }
 
+.contacts {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 40px !important;
+  margin: 0 0 0 300px !important;
+  transition: all .3s;
+}
+
+.contacts.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .menu__link:before {
   content: "";
   height: 3.5px;
@@ -1957,6 +1971,12 @@ body.lock {
   }
 }
 
+@media (max-width: 840px){
+  .contacts {
+    margin: 0 0 0 150px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .text {
     margin-top: 30px;
@@ -2078,6 +2098,9 @@ body.lock {
 @media (max-width: 700px) {
   .bio {
     height: 800px;
+  }
+  .contacts {
+    margin: 0 0 0 50px !important;
   }
 }
 
@@ -2494,6 +2517,9 @@ body.lock {
   .people {
     padding-top: 350px;
   }
+  .contacts {
+    font-size: 25px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2509,6 +2535,14 @@ body.lock {
 }
 
 @media (max-width: 425px) {
+  .contacts {
+    margin: 0 !important;
+  }
+
+  .header__langs li {
+    margin-right: 10px;
+  }
+
   .people {
     padding-top: 250px;
   }
