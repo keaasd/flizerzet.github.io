@@ -99,6 +99,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-weight: 500;
+  background: url("../img/bg.png") top right/210px 210px;
 }
 
 body._lock {
@@ -139,7 +140,6 @@ body._lock {
 
 .card {
   margin: auto;
-  background: url("../img/bg.png") top right/210px 210px;
   max-width: 1680px;
   padding: 100px;
 }
@@ -299,6 +299,10 @@ body._lock {
 }
 
 @media (max-width: 1400px) {
+  .card {
+    padding-bottom: 0;
+  }
+
   .card__body {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -318,6 +322,10 @@ body._lock {
 
   .avatar-card {
     text-align: center;
+  }
+
+  .avatar-card__text {
+    padding: 0 70px;
   }
 }
 
