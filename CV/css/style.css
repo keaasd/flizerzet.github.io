@@ -254,9 +254,7 @@ body._lock {
   position: relative;
 }
 
-.skill-tech__progress:before {
-  content: "";
-  display: block;
+.skill-tech .internet-progress__line {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,16 +263,22 @@ body._lock {
   border-radius: 10px;
 }
 
-.skill-tech .internet-progress::before {
-  width: 50%;
+.skill-tech .social-progress__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 10px;
 }
 
-.skill-tech .social-progress::before {
-  width: 25%;
-}
-
-.skill-tech .shopping-progress::before {
-  width: 50%;
+.skill-tech .shopping-progress__line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .avatar-card {
