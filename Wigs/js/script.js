@@ -118,10 +118,11 @@ let menu = document.querySelector('.sidebar');
 if (burger && menu && closeBurger) {
 	burger.onclick = () => {
 		menu.classList.add('_active');
-		console.log('haha')
+		body.classList.add('_lock');
 	}
 	closeBurger.onclick = () => {
-		menu.classList.remove('_active')
+		menu.classList.remove('_active');
+		body.classList.remove('_lock');
 	}
 }
 // Dynamic Adapt v.1

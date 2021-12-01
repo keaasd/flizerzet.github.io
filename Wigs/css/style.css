@@ -301,16 +301,14 @@ body._lock {
           align-items: center;
 }
 
-.menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.menu__body {
+  isplay: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.menu__list li {
+.menu__body a {
   margin-right: 42px;
 }
 
@@ -413,11 +411,8 @@ body._lock {
   margin-right: 17px;
 }
 
-.menu-sidebar__list li {
-  margin-bottom: 23px;
-}
-
 .menu-sidebar__link {
+  margin-bottom: 23px;
   font-size: 16px;
   color: #000000;
   display: -webkit-box;
@@ -633,6 +628,8 @@ body._lock {
 .body .card__like_wrapper input ~ .heart {
   cursor: pointer;
   position: absolute;
+  width: 19px;
+  height: 19px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -658,7 +655,7 @@ body._lock {
 }
 
 @media (max-width: 1400px) {
-  .menu__list li {
+  .menu__body a {
     margin-right: calc(10px + 32 * ((100vw - 320px) / 1080));
   }
 }
@@ -768,7 +765,7 @@ body._lock {
     margin-left: 50px;
   }
 
-  .menu__list {
+  .menu__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
