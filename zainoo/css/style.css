@@ -712,6 +712,17 @@ main {
   }
 }
 
+@media (max-width: 36em) {
+  .swiper-pagination {
+    left: 45%;
+    padding: 40px 0 0;
+  }
+
+  .slide-main-slider {
+    padding-top: 80px;
+  }
+}
+
 @media (max-width: 20em) {
   .wrapper {
     padding: 0.625rem;
